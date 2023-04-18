@@ -93,7 +93,7 @@ $ http://localhost:3000
 
 # 🚧 Project
 
-### [Live project!](https://) 🚀
+### [Live project!](https://3d-bank.vercel.app/) 🚀
 
 # 🎨 Inspiration
 
