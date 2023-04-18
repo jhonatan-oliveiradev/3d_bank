@@ -1,0 +1,67 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.footer {
+	@include max-width;
+	margin-bottom: 0;
+
+	.container1 {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 4rem;
+		gap: 2rem;
+
+		@include device(tablet) {
+			flex-direction: column;
+			gap: 6rem;
+			align-items: center;
+			text-align: center;
+		}
+
+		.column1,
+		.column3 {
+			max-width: 28rem;
+		}
+
+		.column2,
+		.column3 {
+			h2 {
+				margin-bottom: 3rem;
+			}
+
+			li:not(:last-of-type) {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	.container2 {
+		border-top: 1px solid rgba($gray, 0.6);
+		padding: 2rem 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 2rem;
+
+		span {
+			font-size: 1.4rem;
+		}
+
+		ul {
+			display: flex;
+			gap: 1rem;
+
+			svg {
+				width: 2.1rem;
+				height: 2.1rem;
+				opacity: 0.6;
+				color: $gray;
+				transition: all 0.2s;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

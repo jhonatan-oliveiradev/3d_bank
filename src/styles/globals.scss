@@ -9,6 +9,18 @@
 	font-family: $fontFamily;
 }
 
+::-webkit-scrollbar {
+	width: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+	background: $black;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $white;
+}
+
 html {
 	font-size: 62.5%;
 

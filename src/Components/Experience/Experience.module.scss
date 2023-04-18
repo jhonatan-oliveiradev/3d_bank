@@ -1,0 +1,66 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.experience {
+	@include max-width;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
+
+	@include device(tablet) {
+		grid-template-columns: 1fr;
+		gap: 6rem;
+	}
+
+	.content {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		&:first-of-type {
+			border-right: 1px solid rgba($gray, 0.6);
+
+			@include device(tablet) {
+				border: none;
+			}
+		}
+
+		&.blue::after,
+		&.orange::after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 30rem;
+			top: -85%;
+
+			@include device(tablet) {
+				height: 20rem;
+				top: -20%;
+			}
+		}
+
+		&.blue::after {
+			@include radial-blue-sphere;
+
+			@include device(tablet) {
+				top: -60%;
+			}
+		}
+
+		&.orange::after {
+			@include radial-orange-sphere;
+		}
+
+		h3 {
+			max-width: 35rem;
+		}
+
+		h2 {
+			text-transform: uppercase;
+		}
+	}
+}
